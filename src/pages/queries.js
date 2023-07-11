@@ -59,3 +59,30 @@ export const EVENT_PARTICIPANT = gql`
     }
   }
 `;
+
+export const ADD_NEW_EVENT = gql`
+  mutation Mutation($data: CreateEventInput!) {
+    createEvent(data: $data) {
+      title
+      id
+    }
+  }
+`;
+
+export const ALL_USERS = gql`
+  query {
+    users {
+      id
+      username
+    }
+  }
+`;
+
+export const ALL_LOCATIONS = gql`
+  query Query {
+  locations {
+    name
+    id
+  }
+}
+`;

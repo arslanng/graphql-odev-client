@@ -17,7 +17,6 @@ function Event() {
     subscribeToMore({
       document: EVENT_PARTICIPANT,
       updateQuery: (prev, { subscriptionData }) => {
-        console.log(prev);
         if (!subscriptionData.data) return prev;
 
         return {
@@ -40,7 +39,7 @@ function Event() {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
-  
+
   const event = data.event;
 
   return (
